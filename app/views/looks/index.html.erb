@@ -1,0 +1,21 @@
+<h1>Listing looks</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @looks.each do |look| %>
+  <tr>
+    <td><%= link_to 'Show', look %></td>
+    <td><%= link_to 'Edit', edit_look_path(look) %></td>
+    <td><%= link_to 'Destroy', look, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Look', new_look_path %>
